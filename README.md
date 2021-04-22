@@ -3,7 +3,7 @@ Setup Contrfinder Docker
 ## Build docker
 
 1. docker-compose up -d --build
-2. import db by run command line: 
+2. import db by command line: 
 
 ```
 cat contrfinder_staging_20210419.dump | docker exec -i contrfinder_db pg_restore -U postgres -d contrfinder_dev
@@ -14,7 +14,7 @@ cat contrfinder_staging_20210419.dump | docker exec -i contrfinder_db pg_restore
 
 ## PHP Unit test
 
-run command line:
+command line:
 
 ```
 docker-compose exec app ./vendor/bin/phpunit --colors=always tests/Feature/Http/Controllers/InventoryItemControllerBulkChangeStaffTest
